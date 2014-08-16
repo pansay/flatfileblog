@@ -1,0 +1,23 @@
+RewriteEngine On
+Options +FollowSymlinks
+php_flag magic_quotes_gpc Off
+SetEnvIfNoCase Content-Type "^multipart/form-data;" "MODSEC_NOPOSTBUFFERING=Do not buffer file uploads"
+
+Header set X-UA-Compatible "IE=Edge,chrome=1"
+
+#RewriteCond %{HTTP_HOST} !(yoursite.com|localhost)
+#RewriteRule (.*) http://yoursite.com/$1 [R=301,L]
+
+RewriteBase /flatfileblog/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !\..+$
+RewriteCond %{REQUEST_URI} !/$
+RewriteRule (.*) $1/ [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} style.php|index.php|scripts.php|favicon.ico|robots.txt [OR]
+RewriteCond %{REQUEST_FILENAME} content/design.*|content/images.*
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^.*$ - [S=10]
+
+RewriteRule ^(.*)$ index.php?route=$1 [L,QSA]
