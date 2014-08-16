@@ -7,7 +7,7 @@ class Files {
             $files = array();
             $dir = opendir($path);
                 while (($readfile = readdir($dir)) !== false) {
-                    if (!is_dir($readfile) && $readfile != "." && $readfile != ".." && in_array(pathinfo($readfile)['extension'], array('txt','md'))) {
+                    if (!is_dir($readfile) && $readfile != "." && $readfile != ".." && in_array(substr(strrchr($readfile, "."), 1), array('txt','md'))) {
                         $files[] = $readfile;
                     }
                 }
@@ -23,6 +23,7 @@ class Files {
         $files_new = array();
         foreach ($files as $file) {
             $filePart = str_replace ('.txt', '', $file);
+            $filePart = str_replace ('.md', '', $filePart);
             $fileArr = explode ('_', $filePart);
             $files_new[$fileArr[1]] = array('date' => $fileArr[0], 'alias' => $fileArr[1], 'file' => $file);
         }
