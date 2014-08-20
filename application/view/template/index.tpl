@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title><?=$texts['title']?></title>
+    <title><?=$title?></title>
     <meta name="description" content="<?=$texts['description']?>" />
     <meta name="keywords" content="<?=$texts['keywords']?>" />
     <link rel="stylesheet" href="<?=$urls['style']?>" />
@@ -22,6 +22,25 @@
 					<p class="time"><time><?=$post['date']?></time></p>
 					<div class="post-content"><?=$post['content']?></div>
 				</article>
+
+			<?php break; case 'all' : ?>
+
+				<div id="posts-lists">
+					<ul>
+
+						<?php foreach ($posts as $post) : ?>
+
+							<li>
+								<article>
+									<p class="time"><time><?=$post['date']?></time></a>&nbsp;</p>
+									<a href="<?=$post['url']?>"><?=$post['title']?></a>
+								</article>
+							</li>
+
+						<?php endforeach; ?>
+
+					</ul>
+				</div>
 
 			<?php break; case 'posts' : ?>
 

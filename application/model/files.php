@@ -32,16 +32,35 @@ class Files {
 
     public function getFileContent ($entry) {
         $url = URL_POSTS . '/' . $entry['file'];
-        $handle = fopen($url, "r");
+        $handle = fopen($url, 'r');
+        $entry['title'] = fgets($handle);
+        rewind($handle);
         $entry['content'] = fread($handle, filesize($url));
         $entry['content'] = $this->parse($entry['content']);
+        fclose($handle);
         return $entry;
     }
+
+    public function getFileFirstLine ($entry) {
+        $url = URL_POSTS . '/' . $entry['file'];
+        $handle = fopen($url, "r");
+        $entry['title'] = fgets($handle);
+        fclose($handle);
+        return $entry;
+    }    
 
     public function getFilesContents ($entries, $start, $length) {
         $entries = array_slice($entries, $start, $length);
         foreach ($entries as &$entry) {         
             $entry = $this->getFileContent($entry);
+            $entry['url'] = URL_SITE . '/' . $entry['alias'];
+        }
+        return $entries;
+    }
+
+    public function getFilesFirstLine ($entries) {
+        foreach ($entries as &$entry) {         
+            $entry = $this->getFileFirstLine($entry);
             $entry['url'] = URL_SITE . '/' . $entry['alias'];
         }
         return $entries;

@@ -15,6 +15,7 @@ class Main {
         $this->data['urls']['style'] = URL_SITE . '/style.php';
         $this->data['images']['logo'] = URL_SITE . '/' . URL_DESIGN . '/logo.png';
         $this->entries = $this->files->getFilesListOrganized();
+        $this->data['title'] = $this->data['texts']['title'];
     }
 
     public function dispatch () {
@@ -24,6 +25,9 @@ class Main {
         if ($route === '') {    // home
             $this->viewPosts();
         } 
+        elseif ($route === 'all') { // list all posts
+            $this->viewAllPostsList();
+        }
         elseif ( is_numeric($route) && $route > 0 ) {   // pagination
             $this->viewPosts($route);
         }
@@ -42,13 +46,22 @@ class Main {
         $this->render();
     }
 
+    private function viewAllPostsList () {
+        $this->data['title'] .= SEPARATOR.$this->data['texts']['all-posts'];
+        $this->data['posts'] = $this->files->getFilesFirstLine($this->entries);
+        $this->data['view'] = 'all';
+        $this->render();
+    }
+
     private function viewPost ($post) {
         $this->data['post'] =  $this->files->getFileContent($post);
+        $this->data['title'] .= SEPARATOR.$this->data['post']['title'];
         $this->data['view'] = 'post';
         $this->render();
     }
 
     private function view404 () {
+        $this->data['title'] .= SEPARATOR.$this->data['texts']['404'];
         $this->data['view'] = '404';
         $this->render();
     }
