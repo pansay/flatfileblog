@@ -9,9 +9,9 @@ Minimalistic MVC flat file cms markdown blog tool.
 
 ## How to use
 
-- write your posts using makrdown.
-- save them in the content/posts folder. mind the filename format.
-- that's it!
+- Write your posts using markdown and save them in the content/posts folder, minding the filename format.
+- ???
+- Profit!
 
 ## Features
 
@@ -22,4 +22,4 @@ Minimalistic MVC flat file cms markdown blog tool.
 - nice features:
   - full list of all posts archives
   - pretty urls
-  - post title in <title>
+  - post title in &lt;title&gt; tag
