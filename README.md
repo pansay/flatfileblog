@@ -6,6 +6,8 @@ Minimalistic MVC flat file cms markdown blog tool.
 ## Installation
 
 - Change the relevant values in config/config.php and .htaccess
+- Customize your information in content/texts/texts.csv
+- Apply your design in application/view
 
 ## How to use
 
