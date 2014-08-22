@@ -17,11 +17,13 @@ Minimalistic MVC flat file cms markdown blog tool.
 
 ## Features
 
-- all basic blog features:
+- basic blog features:
   - home page with latest posts
   - pagination based archives
   - individual posts with permalink
 - nice features:
-  - full list of all posts archives
+  - full list of all posts archives page
   - pretty urls
   - post title in &lt;title&gt; tag
+- great features
+  - less support
