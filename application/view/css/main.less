@@ -64,8 +64,7 @@ header {
     padding: 0 2em;
 }
 
-#main-content,
-#footer-links {
+.post-content {
     a {
         color: #44a;
 
@@ -75,37 +74,33 @@ header {
     }
 }
 
-
-h1 {
-    font-size: 1.5em;
-    letter-spacing: .1em;
-    margin: 0 0 1em 0;
-    text-transform: uppercase;
+.post-info {
     text-align: center;
+    margin: 0 0 1em 0;
+
+    h1 {
+        display: block;
+        text-align: center;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+    }
+
+    .dateline {
+        display: block;
+        text-align: center;
+        font-size: .6em;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+    }
 }
 
 #posts article,
 article#post {
 
     p {
-        margin:.5em 0;
+        margin: .5em 0;
         text-align: justify;
-    }
-
-    p.time {
-        text-align: center;
-        margin-bottom: 1em;
-    }
-
-    p.time a time{
-        color: #bbbbbb;
-        font-size: .8em;
-    }
-
-    p.time time{
-        font-size: 1em;
-        color: #757575;
-        border-bottom: 1px dotted #757575;
     }
 
     h2 {

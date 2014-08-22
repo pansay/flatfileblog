@@ -17,7 +17,10 @@
             <?php switch ($view) : 
                 case 'post': ?>
                     <article id="post">
-                        <p class="time"><time><?=$post['date']?></time></p>
+                        <div class="post-info">
+                            <h1><?=$post['title']?></h1>
+                            <time class="dateline"><?=$post['date']?></time>
+                        </div>
                         <div class="post-content"><?=$post['content']?></div>
                     </article>
                 <?php break; case 'all' : ?>
@@ -40,7 +43,10 @@
                             <?php foreach ($posts as $post) : ?>
                                 <li>
                                     <article>
-                                        <p class="time"><a href="<?=$post['url']?>"><time><?=$post['date']?></time></a></p>
+                                        <div class="post-info">
+                                            <h1><?=$post['title']?></h1>
+                                            <a href="<?=$post['url']?>" class="dateline"><time><?=$post['date']?></time></a>
+                                        </div>
                                         <div class="post-content"><?=$post['content']?></div>
                                     </article>
                                 </li>

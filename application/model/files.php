@@ -34,7 +34,8 @@ class Files {
         $url = URL_POSTS . '/' . $entry['file'];
         $handle = fopen($url, 'r');
         $entry['title'] = fgets($handle);
-        rewind($handle);
+        fgets($handle);
+        //rewind($handle);
         $entry['content'] = fread($handle, filesize($url));
         $entry['content'] = $this->parse($entry['content']);
         fclose($handle);
