@@ -1,11 +1,7 @@
 <?php
 
-if (isset($_SERVER['HTTP_ACCEPT_ENCODING']) && substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')) {
-	ob_start("ob_gzhandler");
-}
-else {
-	ob_start();
-}
+ini_set('zlib.output_compression','On');
+ob_start();
 
 include 'application/view/css/main.css';
 $output = ob_get_contents();
