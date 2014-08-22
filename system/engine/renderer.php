@@ -31,6 +31,18 @@ class Renderer {
 
     }
 
+    public static function rss ($template, $data) {
+        if (file_exists ($template)) {
+            extract ($data);    
+            header('Content-Type: text/xml; charset=utf-8', true);
+            header('<?xml version="1.0" encoding="utf-8"?>');
+            include $template;                                    
+        }
+        else {
+            die('Error: Could not load template '.$template.'!');         
+        }
+    }
+
 }
 
 ?>

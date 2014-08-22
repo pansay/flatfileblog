@@ -27,7 +27,10 @@ class Main {
         }
         if ($route === '') {    // home
             $this->viewPosts();
-        } 
+        }
+        elseif ($route === 'rss') { // list all posts
+            $this->viewRSS();
+        }
         elseif ($route === 'all') { // list all posts
             $this->viewAllPostsList();
         }
@@ -48,6 +51,13 @@ class Main {
         $this->data['urls']['pagination'] = Pagination::getPaginationURLs(count($this->entries), (int) $page, POSTS_LIMIT);
         $this->render();
     }
+
+    private function viewRSS () {
+
+        $this->data['posts'] = $this->files->getFilesFirstLine($this->entries);
+        $this->template = 'application/view/template/rss.tpl';
+        $this->renderRSS();
+    }    
 
     private function viewAllPostsList () {
         $this->data['title'] .= SEPARATOR.$this->data['texts']['all-posts'];
@@ -72,6 +82,10 @@ class Main {
 
     private function render () {
         Renderer::output($this->template, $this->data);
+    }
+
+    private function renderRSS () {
+        Renderer::rss($this->template, $this->data);
     }   
 
 }
