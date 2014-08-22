@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+
+ini_set('zlib.output_compression','On');
 
 if (isset($_SERVER['HTTP_ACCEPT_ENCODING']) && substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')) {
 	ob_start("ob_gzhandler");
