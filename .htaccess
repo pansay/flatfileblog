@@ -8,7 +8,7 @@ Header set X-UA-Compatible "IE=Edge,chrome=1"
 #RewriteCond %{HTTP_HOST} !(yoursite.com|localhost)
 #RewriteRule (.*) http://yoursite.com/$1 [R=301,L]
 
-RewriteBase /flatfileblog/
+RewriteBase /perso/flatfileblog/
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_URI} !\..+$
