@@ -69,29 +69,24 @@
             <?php endswitch; ?>
         </div>
         <footer>
-            <p id="footer-links">
-                <a href="<?=$urls['all']?>"><?=$texts['all-posts']?></a>
-            </p>
-            <p id="footer-pagination">
-
-                <?php if ($urls['pagination']) : ?>
-
+            <div id="footer-inner">
+                <div class="pagination pagination-left">
                     <?php if ($urls['pagination']['previous']) : ?>
-                        <a href="<?=$urls['pagination']['previous']?>" class="previous">&lsaquo; &lsaquo;</a>
+                        <a href="<?=$urls['pagination']['previous']?>" class="previous" title="previous page">&lsaquo; &lsaquo;</a>
                     <?php endif; ?>
-
-                    <?php if ($urls['pagination']['previous'] && $urls['pagination']['next']) : ?>
-
+                </div>
+                <div class="footer-links">
+                    <?php if ($urls['all']) : ?>
+                        <a href="<?=$urls['all']?>"><?=$texts['all-posts']?></a>
                     <?php endif; ?>
-
+                </div>
+                <div class="pagination pagination-right">
                     <?php if ($urls['pagination']['next']) : ?>
-                        <a href="<?=$urls['pagination']['next']?>" class="next">&rsaquo; &rsaquo;</a>
+                        <a href="<?=$urls['pagination']['next']?>" class="next" title="next page">&rsaquo; &rsaquo;</a>
                     <?php endif; ?>
-
-                <?php endif; ?>
-            </p>
+                </div>
+            </div>
         </footer>
-
     </div>
 </body>
 </html>

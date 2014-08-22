@@ -17,6 +17,8 @@ class Main {
         //$this->data['images']['logo'] = URL_SITE . '/' . URL_DESIGN . '/logo.png';
         $this->entries = $this->files->getFilesListOrganized();
         $this->data['title'] = $this->data['texts']['title'];
+        $this->data['urls']['pagination']['previous'] = false;
+        $this->data['urls']['pagination']['next'] = false;
     }
 
     public function dispatch () {
@@ -50,6 +52,7 @@ class Main {
     private function viewAllPostsList () {
         $this->data['title'] .= SEPARATOR.$this->data['texts']['all-posts'];
         $this->data['posts'] = $this->files->getFilesFirstLine($this->entries);
+        $this->data['urls']['all'] = false;
         $this->data['view'] = 'all';
         $this->render();
     }

@@ -58,9 +58,9 @@ header {
     }
 }
 
-#main-content {
+#main-content, #footer-links {
     a {
-        color: #55e;
+        color: #44a;
 
         &:hover {
             border-bottom: 1px dashed #55e;
@@ -179,33 +179,50 @@ article#post {
 
 }
 
-footer{
+footer {
     max-width: 850px;
-    margin: 0 auto;
-    padding: 0 2em;
+    margin: 0 auto 1em auto;
+    position: relative;
 }
 
-.pagi {
-    padding: 1em;
-    font-size: 42px;
-    letter-spacing: -9px;
-    font-family: arial;
-}
+    #footer-inner {
+        display: table;
+        width: 100%;
+    }
 
-.previous {
-    float: left;
-}
+    .pagination,
+    .footer-links {
+        display: table-cell;
+    }
 
-.next {
-    float: right;
-}
+    .footer-links {
+        text-align: center;
 
-.all-posts {
-    margin-right: 1em;
+        a {
+            display: inline-block;
+        }
+    }
 
-}
+    .pagination {
+        font-size: 42px;
+        letter-spacing: -9px;
+        font-family: arial;
+
+        a {
+            display: inline-block;
+            width: 20px;
+        }
+    }
+
+    .pagination-left {
+        text-align: left;
+    }
+
+    .pagination-right {
+        text-align: right;
+    }
 
 
 #posts-lists {
-    
+
 }
