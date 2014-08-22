@@ -14,7 +14,7 @@ class Main {
         $this->data['urls']['home'] = URL_SITE;
         $this->data['urls']['all'] = URL_SITE . '/all/';
         $this->data['urls']['style'] = URL_SITE . '/style.php';
-        $this->data['images']['logo'] = URL_SITE . '/' . URL_DESIGN . '/logo.png';
+        //$this->data['images']['logo'] = URL_SITE . '/' . URL_DESIGN . '/logo.png';
         $this->entries = $this->files->getFilesListOrganized();
         $this->data['title'] = $this->data['texts']['title'];
     }

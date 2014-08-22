@@ -10,7 +10,7 @@
 <body>
 	<div id="main">
 		<header>
-			<h1><a href="<?=$urls['home']?>"><img src="<?=$images['logo']?>" alt="<?=$texts['title']?>" /></a></h1>
+			<h1><a href="<?=$urls['home']?>"><?=$texts['title']?></a></h1>
 			<p><?=$texts['tagline']?></p>
 
 		 	<p class="all-posts"><a href="<?=$urls['all']?>"><?=$texts['all-posts']?></a></p>
