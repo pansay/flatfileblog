@@ -8,87 +8,87 @@
     <link rel="stylesheet" href="<?=$urls['style']?>" />
 </head>
 <body>
-	<div id="main">
-		<header>
-			<h1><a href="<?=$urls['home']?>"><?=$texts['title']?></a></h1>
-			<p><?=$texts['tagline']?></p>
+    <div id="main">
+        <header>
+            <p id="main-title"><a href="<?=$urls['home']?>"><?=$texts['title']?></a></p>
+            <p id="main-tagline"><?=$texts['tagline']?></p>
+        </header>
 
-		 	<p class="all-posts"><a href="<?=$urls['all']?>"><?=$texts['all-posts']?></a></p>
-		</header>
+        <?php switch ($view) : 
 
-		<?php switch ($view) : 
+            case 'post': ?>
 
-			case 'post': ?>
+                <article id="post">
+                    <p class="time"><time><?=$post['date']?></time></p>
+                    <div class="post-content"><?=$post['content']?></div>
+                </article>
 
-				<article id="post">
-					<p class="time"><time><?=$post['date']?></time></p>
-					<div class="post-content"><?=$post['content']?></div>
-				</article>
+            <?php break; case 'all' : ?>
 
-			<?php break; case 'all' : ?>
+                <div id="posts-lists">
+                    <ul>
 
-				<div id="posts-lists">
-					<ul>
+                        <?php foreach ($posts as $post) : ?>
 
-						<?php foreach ($posts as $post) : ?>
+                            <li>
+                                <article>
+                                    <p class="time"><time><?=$post['date']?></time></a>&nbsp;</p>
+                                    <a href="<?=$post['url']?>"><?=$post['title']?></a>
+                                </article>
+                            </li>
 
-							<li>
-								<article>
-									<p class="time"><time><?=$post['date']?></time></a>&nbsp;</p>
-									<a href="<?=$post['url']?>"><?=$post['title']?></a>
-								</article>
-							</li>
+                        <?php endforeach; ?>
 
-						<?php endforeach; ?>
+                    </ul>
+                </div>
 
-					</ul>
-				</div>
+            <?php break; case 'posts' : ?>
 
-			<?php break; case 'posts' : ?>
+                <div id="posts">
+                    <ul>
 
-				<div id="posts">
-					<ul>
+                        <?php foreach ($posts as $post) : ?>
 
-						<?php foreach ($posts as $post) : ?>
+                            <li>
+                                <article>
+                                    <p class="time"><a href="<?=$post['url']?>"><time><?=$post['date']?></time></a></p>
+                                    <div class="post-content"><?=$post['content']?></div>
+                                </article>
+                            </li>
 
-							<li>
-								<article>
-									<p class="time"><a href="<?=$post['url']?>"><time><?=$post['date']?></time></a></p>
-									<div class="post-content"><?=$post['content']?></div>
-								</article>
-							</li>
+                        <?php endforeach; ?>
 
-						<?php endforeach; ?>
+                    </ul>
+                </div>
 
-					</ul>
-				</div>
+            <?php break; default: ?>
 
-				<footer>
+                404
 
-					<?php if ($urls['pagination']) : ?>
+        <?php endswitch; ?>
 
-						<?php if ($urls['pagination']['previous']) : ?>
-							<a href="<?=$urls['pagination']['previous']?>" class="pagi previous">&lsaquo; &lsaquo;</a>
-						<?php endif; ?>
+        <footer>
 
-						<?php if ($urls['pagination']['previous'] && $urls['pagination']['next']) : ?>
+            <p class="all-posts"><a href="<?=$urls['all']?>"><?=$texts['all-posts']?></a></p>
 
-						<?php endif; ?>
+            <?php if ($urls['pagination']) : ?>
 
-						<?php if ($urls['pagination']['next']) : ?>
-							<a href="<?=$urls['pagination']['next']?>" class="pagi next">&rsaquo; &rsaquo;</a>
-						<?php endif; ?>
+                <?php if ($urls['pagination']['previous']) : ?>
+                    <a href="<?=$urls['pagination']['previous']?>" class="pagi previous">&lsaquo; &lsaquo;</a>
+                <?php endif; ?>
 
-					<?php endif; ?>
+                <?php if ($urls['pagination']['previous'] && $urls['pagination']['next']) : ?>
 
-				</footer>
+                <?php endif; ?>
 
-			<?php break; default: ?>
+                <?php if ($urls['pagination']['next']) : ?>
+                    <a href="<?=$urls['pagination']['next']?>" class="pagi next">&rsaquo; &rsaquo;</a>
+                <?php endif; ?>
 
-				404
+            <?php endif; ?>
 
-		<?php endswitch; ?>
+        </footer>
 
-	</div>
+    </div>
 </body>
 </html>

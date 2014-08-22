@@ -34,40 +34,39 @@ body {
     background: #fdfdfd;
     font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size: 18px;
-    line-height: 1.4em;
+    line-height: 1.4;
 }
 
 #main {
     margin: 0 auto;
 }
 
-a {
-    text-decoration: none;
-    color: #55e;
-
-    &:hover {
-        border-bottom: 1px dashed #55e;
-    }
-}
-
 header {
-    background: #333333;
-    color: #fff;
-    padding: 0.5em;
+    background: #444;
+    color: #c5c5c5;
+    padding: .5em;
+    
+    #main-title {
+        text-transform: uppercase;    
+        float: left;
+        letter-spacing: .2em;
+    }
+
+    #main-tagline {
+        float: right;
+        font-size: .7em;
+    }
 }
 
-    header h1 {
-        text-transform: uppercase;
-        font-weight: bold;
-        float: left;
-    }
+#main-content {
+    a {
+        color: #55e;
 
-    header p {
-        float: right;
-        font-size: 0.7em;
-        color: #C5C5C5;
-        text-transform: uppercase;
+        &:hover {
+            border-bottom: 1px dashed #55e;
+        }
     }
+}
 
 article {
     max-width: 850px;
@@ -81,23 +80,23 @@ article {
 
     p.time {
         text-align: center;
-        margin-bottom: 2.5em;
+        margin-bottom: 1.5em;
     }
 
     p.time a time{
         color: #bbbbbb;
+        font-size: .8em;
     }
 
     p.time time{
-        font-weight: bold;
         font-size: 1em;
         color: #757575;
+        border-bottom: 1px dotted #757575;
     }
 
     h1 {
         font-size: 1.5em;
-        font-weight: bold;
-        letter-spacing: -1px;
+        letter-spacing: .2em;
         margin: 0 0 1.5em 0;
         text-transform: uppercase;
         text-align: center;
@@ -134,15 +133,16 @@ article {
         }
 
     blockquote {
-        position:relative;
+        position: relative;
         margin: 1.5em;
         padding: 1em;
         background: #f1f1f1;
-        font-size: 1em;
+        font-size: .85em;
+        line-height: 1.5;
 
         &:before {
             position: absolute;
-            top: 0;
+            top: -.5em;
             left: -.5em;
             font-size: 3em;
             color: #f1f1f1;
@@ -150,7 +150,7 @@ article {
         }
         &:after {
             position: absolute;
-            bottom: 0;
+            bottom: -.5em;
             right: -.5em;
             font-size: 3em;
             color: #f1f1f1;
