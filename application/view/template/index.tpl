@@ -13,7 +13,7 @@
 			<h1><a href="<?=$urls['home']?>"><img src="<?=$images['logo']?>" alt="<?=$texts['title']?>" /></a></h1>
 			<p><?=$texts['tagline']?></p>
 
-		 	<p><a href="<?=$urls['all']?>"><?=$texts['all-posts']?></a></p>
+		 	<p class="all-posts"><a href="<?=$urls['all']?>"><?=$texts['all-posts']?></a></p>
 		</header>
 
 		<?php switch ($view) : 
@@ -68,15 +68,15 @@
 					<?php if ($urls['pagination']) : ?>
 
 						<?php if ($urls['pagination']['previous']) : ?>
-							<a href="<?=$urls['pagination']['previous']?>">&lt; &lt;</a>
+							<a href="<?=$urls['pagination']['previous']?>" class="pagi previous">&lsaquo; &lsaquo;</a>
 						<?php endif; ?>
 
 						<?php if ($urls['pagination']['previous'] && $urls['pagination']['next']) : ?>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 						<?php endif; ?>
 
 						<?php if ($urls['pagination']['next']) : ?>
-							<a href="<?=$urls['pagination']['next']?>">&gt; &gt;</a>
+							<a href="<?=$urls['pagination']['next']?>" class="pagi next">&rsaquo; &rsaquo;</a>
 						<?php endif; ?>
 
 					<?php endif; ?>

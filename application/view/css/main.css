@@ -11,6 +11,27 @@
   box-sizing: border-box;
  }
 
+header:before, header:after {
+	content: " ";
+	display: table;
+}
+
+header:after {
+	clear: both;
+}
+
+header {
+	*zoom: 1;
+}
+
+	.all-posts{
+		margin-right: 1em;
+	}
+
+		.all-posts a{
+			color: #CA0000;
+		}
+
 h1, h2, h3, h4, h5, h6 {
 	font-size: inherit;
 	font-weight: normal;
@@ -21,20 +42,40 @@ li {
 }
 
 body {
-	background: #f6f6f6;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 1em;
+	background: #fdfdfd;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 18px;
+	line-height: 1.4em;
 }
 
 #main {
-	width: 500px;
+	/*width: 500px;*/
 	margin: 0 auto;
 }
 
+header {
+	background: #333333;
+	color: #fff;
+	padding: 0.5em;
+}
+
+	header h1{
+		text-transform: uppercase;
+		font-weight: bold;
+		float: left;
+	}
+
+	header p{
+		float: right;
+		font-size: 0.7em;
+		color: #C5C5C5;
+		text-transform: uppercase;
+	}
+
 article {
-	border-top: 1px dotted #c4c4c4;
-	margin: 10px 0;
-	padding: 10px 0;
+	max-width: 850px;
+	margin: 3em auto;
+	padding: 0 2em;
 }
 
 	article p {
@@ -43,29 +84,42 @@ article {
 	}
 
 	article p.time {
-		float: right;
+		text-align: center;
+		margin-bottom: 2.5em;
+	}
+
+	article p.time a time{
+		color: #bbbbbb;
+	}
+
+	article p.time time{
+		font-weight: bold;
+		font-size: 1em;
+		color: #757575;
 	}
 
 	article a {
-		text-decoration: underline;
-		color: #c4c4c4;
+		text-decoration: none;
+		color: #D61C18;
 	}
 
 	article h1 {
-		font-size: 1.6em;
+		font-size: 1.5em;
 		font-weight: bold;
-		letter-spacing: 2px;
-		margin: 0 0 .5em 0;
+		letter-spacing: -1px;
+		margin: 0 0 1.5em 0;
+		text-transform: uppercase;
+		text-align: center;
 	}
 
 	article h2 {
-		font-size: 1.4em;
+		font-size: 1.2em;
 		margin: .5em 0 .5em 0;
 		font-weight: bold;
 	}
 
 	article h3 {
-		font-size: 1.2em;
+		font-size: 1.1em;
 		margin: .5em 0 .5em 0;
 		font-style: italic;
 	}	
@@ -76,6 +130,7 @@ article {
 
 		article ol li {
 			list-style: decimal;
+			margin-bottom: 1em;
 		}
 
 	article ul {
@@ -84,16 +139,23 @@ article {
 
 		article ul li {
 			list-style: square;
+			margin-bottom: 1em;
 		}
 
 	article blockquote {
-		border-left: 1px dotted #c4c4c4;
-		margin: 0 0 0 10px;
-		padding: 0 0 0 10px;
+		margin: 1em;
+		padding: 1em;
+		background: #F1F1F1;
+		font-style: italic;
+		font-size: 0.9em;
+	}
+
+	article blockquote p{
+		margin: 0;
 	}
 
 #posts {
-
+	margin: 4em 0 0;
 }
 
 	#posts article {
@@ -101,5 +163,30 @@ article {
 	}
 
 article#post {
+	margin-top: 4em;
+}
 
+.post-content{
+
+}
+
+footer{
+	max-width: 850px;
+	margin: 0 auto;
+	padding: 0 2em;
+}
+
+.pagi{
+	padding: 1em;
+	font-size: 42px;
+	letter-spacing: -9px;
+	font-family: arial;
+}
+
+.previous{
+	float: left;
+}
+
+.next{
+	float: right;
 }
