@@ -58,7 +58,14 @@ header {
     }
 }
 
-#main-content, #footer-links {
+#main-content {
+    max-width: 850px;
+    margin: 3em auto;
+    padding: 0 2em;
+}
+
+#main-content,
+#footer-links {
     a {
         color: #44a;
 
@@ -68,10 +75,17 @@ header {
     }
 }
 
-article {
-    max-width: 850px;
-    margin: 3em auto;
-    padding: 0 2em;
+
+h1 {
+    font-size: 1.5em;
+    letter-spacing: .1em;
+    margin: 0 0 1em 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#posts article,
+article#post {
 
     p {
         margin:.5em 0;
@@ -92,14 +106,6 @@ article {
         font-size: 1em;
         color: #757575;
         border-bottom: 1px dotted #757575;
-    }
-
-    h1 {
-        font-size: 1.5em;
-        letter-spacing: .1em;
-        margin: 0 0 1em 0;
-        text-transform: uppercase;
-        text-align: center;
     }
 
     h2 {
@@ -224,5 +230,18 @@ footer {
 
 
 #posts-lists {
+    li {
+        clear: left;   
+        height: 1.5em;
+    }
+        .time {
+            float: left;
+            margin: 0 1em 0 0;
+            font-style: italic;
+        }
 
+        a {
+            display: block;
+            float: left;
+        }
 }
