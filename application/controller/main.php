@@ -12,6 +12,7 @@ class Main {
         $this->files = new Files;
         $this->data['texts'] = CSV::basic($this->textsFile);
         $this->data['urls']['home'] = URL_SITE;
+        $this->data['urls']['full'] = URL_FULL;
         $this->data['urls']['all'] = URL_SITE . '/all/';
         $this->data['urls']['style'] = URL_SITE . '/style.php';
         //$this->data['images']['logo'] = URL_SITE . '/' . URL_DESIGN . '/logo.png';
@@ -53,7 +54,6 @@ class Main {
     }
 
     private function viewRSS () {
-
         $this->data['posts'] = $this->files->getFilesFirstLine($this->entries);
         $this->template = 'application/view/template/rss.tpl';
         $this->renderRSS();
