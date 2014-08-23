@@ -28,11 +28,10 @@ Minimalistic MVC flat file cms markdown blog tool.
 - great features
   - less support
   - rss feed
-  - 
   
 ## Documentation
 
-### To insert an imae
+### To insert an image
 
 - place the image in the /content/images folder
-- include it with markdown like this ![alternate text](image.jpg)
+- include it with markdown like this `![alternate text](image.jpg)`
