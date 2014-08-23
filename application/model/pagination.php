@@ -30,9 +30,12 @@ class Pagination {
 
 	}
 
-	public static function getPaginationURLsPost ($items) {
-		// print_r($items);
-		// die();
+	public static function getPaginationURLsPost ($current, $items) {
+		$keys = array_flip(array_keys($items));
+		$values = array_values($items);
+		$previous = isset($values[$keys[$current['alias']] + 1]) ? URL_SITE . '/'. $values[$keys[$current['alias']] + 1]['alias'] : false;
+		$next = isset($values[$keys[$current['alias']] - 1]) ? URL_SITE . '/'. $values[$keys[$current['alias']] - 1]['alias'] : false;
+		return array('previous' => $previous, 'next' => $next);
 	}
 
 }
