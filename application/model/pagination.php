@@ -30,6 +30,11 @@ class Pagination {
 
 	}
 
+	public static function getPaginationURLsPost ($items) {
+		// print_r($items);
+		// die();
+	}
+
 }
 
 ?>

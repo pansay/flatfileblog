@@ -71,6 +71,7 @@ class Main {
     private function viewPost ($post) {
         $this->data['post'] =  $this->files->getFileContent($post);
         $this->data['title'] .= SEPARATOR.$this->data['post']['title'];
+        //$this->data['urls']['pagination'] = Pagination::getPaginationURLsPost($this->entries);
         $this->data['view'] = 'post';
         $this->render();
     }
