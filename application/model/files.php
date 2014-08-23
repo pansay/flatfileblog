@@ -25,7 +25,7 @@ class Files {
             $filePart = str_replace ('.txt', '', $file);
             $filePart = str_replace ('.md', '', $filePart);
             $fileArr = explode ('_', $filePart);
-            $files_new[$fileArr[1]] = array('date' => $fileArr[0], 'alias' => $fileArr[1], 'file' => $file);
+            $files_new[$fileArr[1]] = array('date' => $fileArr[0], 'date-rss' => date(DATE_RSS, strtotime($fileArr[0])), 'alias' => $fileArr[1], 'file' => $file);
         }
         return $files_new;
     }

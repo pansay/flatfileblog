@@ -9,7 +9,7 @@
           <title><![CDATA[<?=$post['title']?>]]></title>
           <description><![CDATA[]]></description>
           <link><?=$post['url-full']?></link>
-          <pubDate></pubDate>
+          <pubDate><?=$post['date-rss']?></pubDate>
         </item>
     <?php endforeach; ?>
   </channel>
