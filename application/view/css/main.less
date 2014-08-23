@@ -54,7 +54,9 @@ header {
 
     #main-tagline {
         float: right;
-        font-size: .7em;
+        text-transform: uppercase;
+        font-size: .8em;
+        padding: .25em 0;
     }
 }
 
@@ -64,17 +66,19 @@ header {
     padding: 0 2em;
 }
 
-.post-content {
+.post-content,
+.page {
     a {
         color: #44a;
 
         &:hover {
-            border-bottom: min- dashed #55e;
+            border-bottom: 1px dashed #55e;
         }
     }
 }
 
-.post-info {
+.post-info,
+.page-info {
     text-align: center;
     margin: 0 0 1em 0;
 

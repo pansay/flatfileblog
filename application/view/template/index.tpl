@@ -25,8 +25,10 @@
                         <div class="post-content"><?=$post['content']?></div>
                     </article>
                 <?php break; case 'all' : ?>
-                    <div id="posts-lists">
-                        <h1><?=$texts['all-posts']?></h1>
+                    <div id="posts-lists" class="page">
+                        <div class="post-info">
+                            <h1><?=$texts['all-posts']?></h1>
+                        </div>
                         <ul>
                             <?php foreach ($posts as $post) : ?>
                                 <li>
