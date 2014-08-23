@@ -27,3 +27,12 @@ Minimalistic MVC flat file cms markdown blog tool.
   - post title in &lt;title&gt; tag
 - great features
   - less support
+  - rss feed
+  - 
+  
+## Documentation
+
+### To insert an imae
+
+- place the image in the /content/images folder
+- include it with markdown like this ![alternate text](image.jpg)
