@@ -6,6 +6,7 @@
     <meta name="description" content="<?=$texts['description']?>" />
     <meta name="keywords" content="<?=$texts['keywords']?>" />
     <link rel="stylesheet" href="<?=$urls['style']?>" />
+    <link rel="alternate" type="application/rss+xml" href="<?=$urls['rss']?>" />
 </head>
 <body>
     <div id="main">

@@ -14,6 +14,7 @@ class Main {
         $this->data['urls']['home'] = URL_SITE;
         $this->data['urls']['full'] = URL_FULL;
         $this->data['urls']['all'] = URL_SITE . '/all/';
+        $this->data['urls']['rss'] = URL_SITE . '/rss/';
         $this->data['urls']['style'] = URL_SITE . '/style.php';
         //$this->data['images']['logo'] = URL_SITE . '/' . URL_DESIGN . '/logo.png';
         $this->entries = $this->files->getFilesListOrganized();
@@ -29,7 +30,7 @@ class Main {
         if ($route === '') {    // home
             $this->viewPosts();
         }
-        elseif ($route === 'rss') { // list all posts
+        elseif ($route === 'rss') { // rss
             $this->viewRSS();
         }
         elseif ($route === 'all') { // list all posts
