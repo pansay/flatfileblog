@@ -19,8 +19,8 @@ class Renderer {
 
             ob_end_clean ();
 
-            header ('X-UA-Compatible: IE=Edge', true);
-            header ('Content-Type: text/html; charset=utf-8', true);
+            header('X-UA-Compatible: IE=Edge', true);
+            header('Content-Type: text/html; charset=utf-8', true);
 
             echo $output;
                                     

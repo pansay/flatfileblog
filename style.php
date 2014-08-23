@@ -29,7 +29,9 @@ $output = str_replace("{ ", '{', $output);
 $output = str_replace("} ", '}', $output);
 ob_end_clean ();
 
-header("Content-type: text/css; charset=utf-8");
+header("Expires: ".gmdate("D, d M Y H:i:s", time()+315360000)." GMT");
+header("Cache-Control: max-age=315360000");
+header("Content-type: text/css");
 echo $output;
 
 ?>
