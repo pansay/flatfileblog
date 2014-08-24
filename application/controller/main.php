@@ -55,7 +55,8 @@ class Main {
     }
 
     private function viewRSS () {
-        $this->data['posts'] = $this->files->getFilesFirstLine($this->entries);
+        //$this->data['posts'] = $this->files->getFilesFirstLine($this->entries);
+        $this->data['posts'] = $this->files->getFilesContents($this->entries, 0, POSTS_LIMIT_RSS);
         $this->template = 'application/view/template/rss.tpl';
         $this->renderRSS();
     }    

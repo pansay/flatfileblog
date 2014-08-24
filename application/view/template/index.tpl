@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <title><?=$title?></title>
@@ -30,7 +30,7 @@
                             <h1><?=$texts['all-posts']?></h1>
                         </div>
                         <ul>
-                            <?php foreach ($posts as $post) : ?>
+                            <?php foreach($posts as $post) : ?>
                                 <li>
                                     <article>
                                         <p class="time"><time><?=$post['date']?></time></p>
@@ -43,7 +43,7 @@
                 <?php break; case 'posts' : ?>
                     <div id="posts">
                         <ul>
-                            <?php foreach ($posts as $post) : ?>
+                            <?php foreach($posts as $post) : ?>
                                 <li>
                                     <article>
                                         <div class="post-info">

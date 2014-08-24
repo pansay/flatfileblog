@@ -55,6 +55,7 @@ class Files {
         foreach ($entries as &$entry) {         
             $entry = $this->getFileContent($entry);
             $entry['url'] = URL_SITE . '/' . $entry['alias'];
+            $entry['url-full'] = URL_FULL . '/' . $entry['alias']; 
         }
         return $entries;
     }

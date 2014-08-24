@@ -7,7 +7,7 @@
     <?php foreach ($posts as $post) : ?>
         <item>
           <title><![CDATA[<?=$post['title']?>]]></title>
-          <description><![CDATA[]]></description>
+          <description><![CDATA[<?=$post['content']?>]]></description>
           <link><?=$post['url-full']?></link>
           <pubDate><?=$post['date-rss']?></pubDate>
         </item>

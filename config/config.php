@@ -7,6 +7,7 @@ define('URL_DESIGN', 'content/design');
 define('URL_IMAGES', 'content/images');
 
 define('POSTS_LIMIT', 5);
+define('POSTS_LIMIT_RSS', 20);
 define('SEPARATOR',' | ');
 
 ?>
