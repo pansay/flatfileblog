@@ -32,6 +32,11 @@ FlatFileBlog has all of the basic blog features, and more!
   
 ## Documentation
 
+### Formatting specifics
+
+- the filename must start with an ISO 8601 formatted date, then underscore, then the pretty url, and end in .md
+- the first line of the file is the title, the second line is ignored, the best is to use the `===` formatting for h1 
+
 ### To insert an image
 
 - place the image in the /content/images folder
