@@ -7,9 +7,10 @@ Minimalistic MVC flat file markdown blog tool.
 
 - Avoid DBs
 - Avoid WYSIWYG
+- Avoid writing inside a browser form
 - Use git and github for full versioning and backup both of the code and the blog's content
-- Use a text editor, not a browser form, to write your posts
-- Use markdown formatting
+- Use a text editor, not a browser form, to write your posts in markdown (.md) format
+- Use a text editor, not a browser form, to enter your static data and texts (.csv file)
 
 ## Installation
 
