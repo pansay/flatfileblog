@@ -72,6 +72,7 @@ class Files {
     private function parse ($string) {
         $string = Parsedown::instance()->parse($string);
         $string = str_replace('src="', 'src="' . URL_SITE . '/' . URL_IMAGES . '/', $string);
+        $string = preg_replace('/<a href="(?!http)(.*?)">/', '<a href="' . URL_SITE . '/$1">', $string);
         return $string;
     }
 
