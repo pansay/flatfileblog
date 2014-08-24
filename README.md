@@ -1,7 +1,15 @@
 flatfileblog
 ============
 
-Minimalistic MVC flat file cms markdown blog tool.
+Minimalistic MVC flat file markdown blog tool.
+
+## The idea
+
+- Avoid DBs
+- Avoid WYSIWYG
+- Use git and github for full versioning and backup both of the code and the blog's content
+- Use a text editor, not a browser form, to write your posts
+- Use markdown formatting
 
 ## Installation
 
