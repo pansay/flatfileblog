@@ -41,3 +41,8 @@ FlatFileBlog has all of the basic blog features, and more!
 
 - place the image in the /content/images folder
 - include it with markdown like this `![alternate text](image.jpg)`
+
+
+### To insert an inner link
+
+- Simply use the alias as the url: `[link text](some-alias)`
