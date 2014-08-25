@@ -24,7 +24,7 @@ class Main {
     }
 
     public function dispatch () {
-        if (isset($_GET['route'])) {    
+        if (isset($_GET['route'])) {
             $route = String::cleanRoute($_GET['route']);
         }
         if ($route === '') {    // home
@@ -41,7 +41,7 @@ class Main {
         }
         elseif (isset($this->entries[$route])) {    // single post
             $this->viewPost($this->entries[$route]);
-        } 
+        }
         else {  // 404
             $this->view404();
         }
@@ -59,7 +59,7 @@ class Main {
         $this->data['posts'] = $this->files->getFilesContents($this->entries, 0, POSTS_LIMIT_RSS);
         $this->template = 'application/view/template/rss.tpl';
         $this->renderRSS();
-    }    
+    }
 
     private function viewAllPostsList () {
         $this->data['title'] .= SEPARATOR.$this->data['texts']['all-posts'];
@@ -89,7 +89,7 @@ class Main {
 
     private function renderRSS () {
         Renderer::rss($this->template, $this->data);
-    }   
+    }
 
 }
 

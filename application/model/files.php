@@ -11,10 +11,10 @@ class Files {
                         $files[] = $readfile;
                     }
                 }
-            closedir($dir);                 
-            Arrays::array_sort($files); 
+            closedir($dir);
+            Arrays::array_sort($files);
             return $files;
-        }   
+        }
     }
 
     public function getFilesListOrganized () {
@@ -26,9 +26,9 @@ class Files {
                 $filePart = str_replace ('.md', '', $file);
                 $fileArr = explode ('_', $filePart);
                 $files_new[$fileArr[1]] = array(
-                    'date' => $fileArr[0], 
-                    'date-rss' => date(DATE_RSS, strtotime($fileArr[0])), 
-                    'alias' => $fileArr[1], 
+                    'date' => $fileArr[0],
+                    'date-rss' => date(DATE_RSS, strtotime($fileArr[0])),
+                    'alias' => $fileArr[1],
                     'file' => $file
                 );
             }
@@ -54,23 +54,23 @@ class Files {
         $entry['title'] = fgets($handle);
         fclose($handle);
         return $entry;
-    }    
+    }
 
     public function getFilesContents ($entries, $start, $length) {
         $entries = array_slice($entries, $start, $length);
-        foreach ($entries as &$entry) {         
+        foreach ($entries as &$entry) {
             $entry = $this->getFileContent($entry);
             $entry['url'] = URL_SITE . '/' . $entry['alias'];
-            $entry['url-full'] = URL_FULL . '/' . $entry['alias']; 
+            $entry['url-full'] = URL_FULL . '/' . $entry['alias'];
         }
         return $entries;
     }
 
     public function getFilesFirstLine ($entries) {
-        foreach ($entries as &$entry) {         
+        foreach ($entries as &$entry) {
             $entry = $this->getFileFirstLine($entry);
             $entry['url'] = URL_SITE . '/' . $entry['alias'];
-            $entry['url-full'] = URL_FULL . '/' . $entry['alias']; 
+            $entry['url-full'] = URL_FULL . '/' . $entry['alias'];
         }
         return $entries;
     }
