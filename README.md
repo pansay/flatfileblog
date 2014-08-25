@@ -55,3 +55,7 @@ FlatFileBlog has all of the basic blog features, and more!
 ### To insert an inner link
 
 - Simply use the alias as the url: `[link text](some-alias)`
+
+### To write a draft
+
+- Save it with an url like `2014-12-30_my-draft-title.draft.md`
