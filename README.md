@@ -42,6 +42,7 @@ FlatFileBlog has all of the basic blog features, and more!
 - rss feed
 - valid html and css
 - minified html and css
+- easily extensible MVC codebase
   
 ## Documentation
 
