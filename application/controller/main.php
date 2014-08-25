@@ -27,7 +27,7 @@ class Main {
         if (isset($_GET['route'])) {
             $route = String::cleanRoute($_GET['route']);
         }
-        if ($route === '') {    // home
+        if ($route === '') { // home
             $this->viewPosts();
         }
         elseif ($route === 'rss') { // rss
@@ -36,13 +36,13 @@ class Main {
         elseif ($route === 'all') { // list all posts
             $this->viewAllPostsList();
         }
-        elseif ( is_numeric($route) && $route > 0 ) {   // pagination
+        elseif (is_numeric($route) && $route > 0) { // pagination
             $this->viewPosts($route);
         }
-        elseif (isset($this->entries[$route])) {    // single post
+        elseif (isset($this->entries[$route])) { // single post
             $this->viewPost($this->entries[$route]);
         }
-        else {  // 404
+        else { // 404
             $this->view404();
         }
     }

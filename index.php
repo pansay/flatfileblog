@@ -1,5 +1,4 @@
 <?php
-
 include 'config/config.php';
 include 'lib/parsedown.php';
 include 'system/helper/arrays.php';

@@ -7,7 +7,7 @@ class Files {
             $files = array();
             $dir = opendir($path);
                 while (($readfile = readdir($dir)) !== false) {
-                    if (!is_dir($readfile) && $readfile != "." && $readfile != ".." && in_array(substr(strrchr($readfile, "."), 1), array('txt','md'))) {
+                    if (!is_dir($readfile) && $readfile != '.' && $readfile != '..') {
                         $files[] = $readfile;
                     }
                 }
@@ -41,7 +41,6 @@ class Files {
         $handle = fopen($url, 'r');
         $entry['title'] = fgets($handle);
         fgets($handle);
-        //rewind($handle);
         $entry['content'] = fread($handle, filesize($url));
         $entry['content'] = $this->parse($entry['content']);
         fclose($handle);
@@ -50,8 +49,8 @@ class Files {
 
     public function getFileFirstLine ($entry) {
         $url = URL_POSTS . '/' . $entry['file'];
-        $handle = fopen($url, "r");
-        $entry['title'] = fgets($handle);
+        $handle = fopen($url, 'r');
+            $entry['title'] = fgets($handle);
         fclose($handle);
         return $entry;
     }

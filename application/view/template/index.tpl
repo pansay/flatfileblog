@@ -15,7 +15,7 @@
             <p id="main-tagline"><?=$texts['tagline']?></p>
         </header>
         <div id="main-content">
-            <?php switch ($view) : 
+            <?php switch ($view) :
                 case 'post': ?>
                     <article id="post">
                         <div class="post-info">
@@ -30,7 +30,7 @@
                             <h1><?=$texts['all-posts']?></h1>
                         </div>
                         <ul>
-                            <?php foreach($posts as $post) : ?>
+                            <?php foreach ($posts as $post) : ?>
                                 <li>
                                     <article>
                                         <p class="time"><time><?=$post['date']?></time></p>
@@ -43,7 +43,7 @@
                 <?php break; case 'posts' : ?>
                     <div id="posts">
                         <ul>
-                            <?php foreach($posts as $post) : ?>
+                            <?php foreach ($posts as $post) : ?>
                                 <li>
                                     <article>
                                         <div class="post-info">

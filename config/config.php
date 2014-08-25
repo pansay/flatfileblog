@@ -1,5 +1,4 @@
 <?php
-
 define('URL_SITE', '/flatfileblog');
 define('URL_FULL', 'http://localhost' . URL_SITE);
 define('URL_POSTS', 'content/posts');
