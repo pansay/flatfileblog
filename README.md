@@ -37,8 +37,11 @@ FlatFileBlog has all of the basic blog features, and more!
   - previous/next navigation from the home page listing X latest posts (x by x)
   - previous/next navigation from individual post page (1 by 1)
   - full list of all posts
-- less support
+- markdown parser
+- less parser
 - rss feed
+- valid html and css
+- minified html and css
   
 ## Documentation
 
@@ -51,7 +54,6 @@ FlatFileBlog has all of the basic blog features, and more!
 
 - place the image in the /content/images folder
 - include it with markdown like this `![alternate text](image.jpg)`
-
 
 ### To insert an inner link
 
