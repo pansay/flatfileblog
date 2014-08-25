@@ -11,6 +11,7 @@ Minimalistic MVC flat file markdown blog tool.
 - Use git and github for full versioning and backup both of the code and the blog's content
 - Use a text editor, not a browser form, to write your posts in markdown (.md) format
 - Use a text editor, not a browser form, to enter your static data and texts (.csv file)
+- Or, if you prefer or must (browser access only), you can edit both .md and .csv files directly through github, which renders both nicely.
 
 ## Installation
 
