@@ -27,7 +27,6 @@ class Pagination {
 		}
 
 		return $urls;
-
 	}
 
 	public static function getPaginationURLsPost ($current, $items) {

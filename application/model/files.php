@@ -22,10 +22,16 @@ class Files {
         $files = Arrays::array_sort($files);
         $files_new = array();
         foreach ($files as $file) {
-            $filePart = str_replace ('.txt', '', $file);
-            $filePart = str_replace ('.md', '', $filePart);
-            $fileArr = explode ('_', $filePart);
-            $files_new[$fileArr[1]] = array('date' => $fileArr[0], 'date-rss' => date(DATE_RSS, strtotime($fileArr[0])), 'alias' => $fileArr[1], 'file' => $file);
+            if (preg_match('/(?<!\.draft)\.md/', $file)) {
+                $filePart = str_replace ('.md', '', $file);
+                $fileArr = explode ('_', $filePart);
+                $files_new[$fileArr[1]] = array(
+                    'date' => $fileArr[0], 
+                    'date-rss' => date(DATE_RSS, strtotime($fileArr[0])), 
+                    'alias' => $fileArr[1], 
+                    'file' => $file
+                );
+            }
         }
         return $files_new;
     }
