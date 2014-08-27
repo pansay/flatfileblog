@@ -15,6 +15,7 @@ Minimalistic MVC flat file markdown blog tool.
 
 ## Installation
 
+- Fork
 - Change the relevant values in config/config.php and .htaccess
 - Customize your information in content/texts/texts.csv
 - Apply your design in application/view
