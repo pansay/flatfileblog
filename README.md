@@ -61,6 +61,11 @@ FlatFileBlog has all of the basic blog features, and more!
 
 - Simply use the alias as the url: `[link text](some-alias)`
 
+### To insert an inner link to an image
+
+- place the image in the /content/images folder
+- link it like this: `[link text](images/image.jpg)`
+
 ### To write a draft
 
 - Save it with an url like `2014-12-30_my-draft-title.draft.md`
