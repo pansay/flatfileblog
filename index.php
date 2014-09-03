@@ -1,6 +1,7 @@
 <?php
 include 'config/config.php';
 include 'lib/parsedown.php';
+include 'system/helper/php.php';
 include 'system/helper/arrays.php';
 include 'system/helper/csv.php';
 include 'system/helper/string.php';

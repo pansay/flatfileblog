@@ -24,7 +24,6 @@ class Renderer {
         if (file_exists($template)) {
             extract($data);
             header('Content-Type: application/rss+xml; charset=utf-8');
-            header('<?xml version="1.0" encoding="utf-8"?>');
             include $template;
         }
         else {

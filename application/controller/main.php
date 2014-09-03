@@ -80,6 +80,7 @@ class Main {
     private function view404 () {
         $this->data['title'] .= SEPARATOR.$this->data['texts']['404'];
         $this->data['view'] = '404';
+        http_response_code(404);
         $this->render();
     }
 
