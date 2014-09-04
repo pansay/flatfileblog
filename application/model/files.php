@@ -59,8 +59,8 @@ class Files {
         $entries = array_slice($entries, $start, $length);
         foreach ($entries as &$entry) {
             $entry = $this->getFileContent($entry);
-            $entry['url'] = URL_SITE . '/' . $entry['alias'];
-            $entry['url-full'] = URL_FULL . '/' . $entry['alias'];
+            $entry['url'] = URL_SITE . '/' . $entry['alias'] . '/';
+            $entry['url-full'] = URL_FULL . '/' . $entry['alias'] . '/';
         }
         return $entries;
     }
@@ -68,8 +68,8 @@ class Files {
     public function getFilesFirstLine ($entries) {
         foreach ($entries as &$entry) {
             $entry = $this->getFileFirstLine($entry);
-            $entry['url'] = URL_SITE . '/' . $entry['alias'];
-            $entry['url-full'] = URL_FULL . '/' . $entry['alias'];
+            $entry['url'] = URL_SITE . '/' . $entry['alias'] . '/';
+            $entry['url-full'] = URL_FULL . '/' . $entry['alias'] . '/';
         }
         return $entries;
     }

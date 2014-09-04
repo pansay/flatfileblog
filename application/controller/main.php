@@ -11,7 +11,7 @@ class Main {
     public function __construct () {
         $this->files = new Files;
         $this->data['texts'] = CSV::basic($this->textsFile);
-        $this->data['urls']['home'] = URL_SITE;
+        $this->data['urls']['home'] = URL_FULL;
         $this->data['urls']['full'] = URL_FULL;
         $this->data['urls']['all'] = URL_SITE . '/all/';
         $this->data['urls']['rss'] = URL_SITE . '/rss/';
