@@ -13,6 +13,10 @@ Minimalistic MVC flat file markdown blog tool.
 - Use a text editor, not a browser form, to enter your static data and texts (.csv file)
 - Or, if you prefer or must (browser access only), you can edit both .md and .csv files directly through github, which renders both nicely.
 
+## Example forks
+
+* https://github.com/pansay/linguistica
+
 ## Installation
 
 - Fork
