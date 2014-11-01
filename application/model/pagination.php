@@ -3,16 +3,16 @@
 class Pagination {
 
 	public static function getPaginationURLs ($items, $page, $limit) {
-		$pages = intval($items / $limit) - 1;
 		$urls = array(
 			'previous' => false,
 			'next' => false
 		);
+		$pages = intval($items / $limit) - 1;
+		if ($items % $limit) {
+			$pages++;
+		}
 		if ($pages < 1) {
 			return false;	// no pagination
-		}
-		else if ($items % $limit) {
-			$pages++;
 		}
 		if ($page < $pages) {
 			$urls['previous'] = URL_SITE . '/'. ($page + 1) . '/';
